@@ -6,7 +6,7 @@ public:
             ls.insert(num);
         }
         int ans=0;
-        for(int num :nums){
+        for(int num :ls){
             if(ls.find(num-1)==ls.end()){
                 int count=1;
                 int current =num;
