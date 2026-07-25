@@ -1,12 +1,21 @@
 class Solution {
 public:
     int maxProduct(int n) {
-        int product=1;
+        
+        int largest = -1;
+int secondlargest = -1;
         while(n>0){
             int digit=n%10;
-            product=product*digit;
+            if(digit>largest){
+                secondlargest=largest;
+                largest=digit;
+            }
+            else if(digit>secondlargest){
+                secondlargest=digit;
+            }
             n=n/10;
         }
-        return product;
+        return largest*secondlargest;
+    
     }
 };
