@@ -1,19 +1,18 @@
-class Solution {
-public:
-    bool predictTheWinner(vector<int>& nums) {
-        int player1=0;
-        int player2=0;
-        for(int i=0;i<=nums.size();i+=2){
-            player1+=i;
+int n = nums.size();
+        vector<vector<int>> dp(n, vector<int>(n, 0));
+
+        for (int i = 0; i < n; i++)
+            dp[i][i] = nums[i];
+
+        for (int len = 2; len <= n; len++) {
+            for (int i = 0; i + len - 1 < n; i++) {
+                int j = i + len - 1;
+
+                dp[i][j] = max(
+                    nums[i] - dp[i + 1][j],
+                    nums[j] - dp[i][j - 1]
+                );
+            }
         }
-        for(int i=1;i<=nums.size();i+=2){
-            player2+=i;
-        }
-        if(player1>=player2){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-};
+
+        return dp[0][n - 1] >= 0;
