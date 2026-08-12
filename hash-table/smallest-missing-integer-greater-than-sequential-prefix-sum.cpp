@@ -9,8 +9,8 @@ public:
                 break;
             }
         }
-        int i=0;
-        while(true){
+        
+        for(int i=0;;i++){
             bool found = false;
             for (int j = 0; j < nums.size(); j++) {
                 if (sum + i == nums[j]) {
@@ -22,6 +22,6 @@ public:
                 return sum + i;
             }
         }
-        i++;
+    
     }
 };
