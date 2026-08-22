@@ -3,6 +3,7 @@ public:
     bool checkDivisibility(int n) {
         int sum=0;
         int product=1;
+        int temp=n;
         while(n>0){
             int digit=n%10;
             int sum=sum+digit;
@@ -10,7 +11,7 @@ public:
             n=n/10;
         }
        int total=sum+product;
-       if(n/total){
+       if(temp/total){
         return true;
        }
        else{
