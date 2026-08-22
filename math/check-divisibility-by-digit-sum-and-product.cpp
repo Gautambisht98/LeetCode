@@ -6,12 +6,12 @@ public:
         int temp=n;
         while(n>0){
             int digit=n%10;
-            int sum=sum+digit;
-            int product=product*digit;
+            sum=sum+digit;
+             product=product*digit;
             n=n/10;
         }
        int total=sum+product;
-       if(temp/total){
+       if(temp%total==0){
         return true;
        }
        else{
