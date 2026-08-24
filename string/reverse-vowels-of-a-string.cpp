@@ -6,11 +6,11 @@ public:
       int right=n-1;
       string vowels ="aeiouAEIOU";
       while(left<right){
-        if(vowels.find(s[left])!=string::npos){
-            right--;
-        }
-        else if(vowels.find(s[right])!=string::npos){
+        if(vowels.find(s[left])==string::npos){
             left++;
+        }
+        else if(vowels.find(s[right])==string::npos){
+            right--;
         }
         else{
             swap(s[left],s[right]);
