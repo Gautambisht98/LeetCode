@@ -9,7 +9,7 @@ public:
         int i=1;
         while(k>0){
             
-            if(freq[num]!=k*i){
+            if(freq[k*i]==0){
              i++;
             }else{
                 int ans=k*i;
