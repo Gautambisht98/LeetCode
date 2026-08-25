@@ -2,7 +2,7 @@ class Solution {
 public:
     int missingMultiple(vector<int>& nums, int k) {
         unordered_map<int,int> freq;
-        for(num:nums){
+        for(int num:nums){
             freq[num]++;
         }
         int i=1;
