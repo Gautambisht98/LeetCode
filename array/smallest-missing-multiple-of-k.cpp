@@ -4,7 +4,7 @@ public:
         unordered_map<int,int> freq;
         
         for(int num:nums){
-            freq[nums[num]]++;
+            freq[num]++;
         }
         int i=1;
         while(k>0){
