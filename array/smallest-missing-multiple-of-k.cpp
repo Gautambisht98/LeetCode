@@ -2,9 +2,9 @@ class Solution {
 public:
     int missingMultiple(vector<int>& nums, int k) {
         unordered_map<int,int> freq;
-        int num;
-        for(num:nums){
-            freq[num]++;
+        
+        for(int num:nums){
+            freq[nums[num]]++;
         }
         int i=1;
         while(k>0){
