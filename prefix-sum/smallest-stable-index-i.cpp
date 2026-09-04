@@ -10,8 +10,8 @@ public:
             for (int j = 0; j <= i; j++) {
                 maxi = max(maxi, nums[j]);
             }
-            for (int g = 0; g < n; g++) {
-                mini = min(mini, nums[g]);
+            for (int j= i; j < n; j++) {
+                mini = min(mini, nums[j]);
             }
             if (maxi - mini <= k) {
                 return i;
