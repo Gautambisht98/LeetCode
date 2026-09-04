@@ -7,7 +7,7 @@ public:
             int maxi = nums[0];
             int mini = nums[i];
 
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j <= i; j++) {
                 maxi = max(maxi, nums[j]);
             }
             for (int g = 0; g < n-1; g++) {
