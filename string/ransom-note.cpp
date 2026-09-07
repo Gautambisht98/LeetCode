@@ -10,7 +10,7 @@ public:
             freq2[num]++;
         }
         for (char num : ransomNote) {
-            if (freq1(num) > freq2(num)) {
+            if (freq1[num]> freq2[num]) {
                 return false;
             }
         }
