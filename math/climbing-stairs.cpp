@@ -8,7 +8,7 @@ public:
         if (n == 0)
             return 1;
 
-        int ans = climbStairs(n - 1) + climbStairs(n - 2);
-        return ans;
+        return climbStairs(n - 1) + climbStairs(n - 2);
+        
     }
 };
