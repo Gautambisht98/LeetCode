@@ -6,7 +6,7 @@ public:
          count+=n-i+1;
            }
    
-        }
+        
         return count;
     }
 };
