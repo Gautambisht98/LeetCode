@@ -9,19 +9,19 @@ public:
 
       int ans=0;
 
-      for(int first=1;first<digits.size();first++){
+      for(int first=1;first<=9;first++){
         if(freq[first]==0)
         continue;
 
         freq[first]--;
 
-        for(int second=0;second<digits.size();second++){
+        for(int second=0;second<=9;second++){
             if(freq[second]==0){
                 continue;
             }
             freq[second]--;
 
-            for(int third=2;third<=8;third=+2){
+            for(int third=2;third<=8;third+=2){
                 if(freq[third]>0){
                     ans++;
                 }
