@@ -21,7 +21,7 @@ public:
             }
             freq[second]--;
 
-            for(int third=2;third<=8;third+=2){
+            for(int third=0;third<=8;third+=2){
                 if(freq[third]>0){
                     ans++;
                 }
