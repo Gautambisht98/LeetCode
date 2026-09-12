@@ -29,7 +29,7 @@ public:
 
             count++;
         }
-        head=prev;
+        
         return prev;
     }
 };
