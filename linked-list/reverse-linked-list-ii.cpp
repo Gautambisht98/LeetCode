@@ -16,11 +16,13 @@ public:
         ListNode* next=NULL;
 
         while(curr!=NULL){
-            if(curr>=left && curr<=right){
+            for(int i=0;i<500;i++){
+            if(curr[i]>=left && curr[i]<=right){
             next=curr->next;
             curr->next=prev;
             prev=curr;
             curr=next;
+            }
             }
         }
          return prev;
