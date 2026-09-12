@@ -24,11 +24,12 @@ public:
                 curr = next;
             } else {
                 curr = curr->next;
-                head=prev;
+              
             }
 
             count++;
         }
+        head=prev;
         return prev;
     }
 };
