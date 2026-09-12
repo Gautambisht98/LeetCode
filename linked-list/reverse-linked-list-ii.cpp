@@ -15,11 +15,13 @@ public:
         ListNode* curr=head;
         ListNode* next=NULL;
 
-        while(curr!=NULL && curr>=left && curr<=right){
+        while(curr!=NULL){
+            if(curr>=left && curr<=right){
             next=curr->next;
             curr->next=prev;
             prev=curr;
             curr=next;
+            }
         }
          return prev;
     }
