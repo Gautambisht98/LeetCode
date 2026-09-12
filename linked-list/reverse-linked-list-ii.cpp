@@ -24,7 +24,7 @@ public:
                 curr = next;
             } else {
                 curr = curr->next;
-                prev=curr;
+                head=prev;
             }
 
             count++;
