@@ -5,20 +5,20 @@ public:
 
         int widthA = ax2 - ax1;
         int heightA = ay2 - ay1;
-        int AreaA = widthA * heightA;//16
+        int AreaA = widthA * heightA;
 
         int widthB = bx2 - bx1;
         int heightB = by2 - by1;
-        int AreaB = widthB * heightB;//1
-        int left = max(ax1, bx1);//3
-        int right = min(ax2, bx2);//2
-        int overlapx = right - left;//-1
+        int AreaB = widthB * heightB;
+        int left = max(ax1, bx1);
+        int right = min(ax2, bx2);
+        int overlapx = max(0, right - left);
 
-        int bottom = max(ay1, by1);//3
-        int top = min(ay2, by2);//2
-        int overlapy = top - bottom;//-1
+        int bottom = max(ay1, by1);
+        int top = min(ay2, by2);
+        int overlapy = max(0, top - bottom);
 
-        int totaloverlap = overlapx * overlapy;//1
+        int totaloverlap = overlapx * overlapy;
 
         return AreaA + AreaB - totaloverlap;
     }
