@@ -10,32 +10,30 @@
  */
 class Solution {
 public:
-    ListNode* middleNode(ListNode* head){
+    ListNode* middleNode(ListNode* head) {
 
-        struct ListNode{int data;
-    ListNode* next;
-    ListNode(int value) {
-        data = value;
-        next = NULL;
-    }
-    ListNode* temp = head;
-    int count = 0;
-    while (temp != NULL) {
-        count++;
-        temp=temp->next;
-    }
-    temp=head;
-    for (int i = 0; i < count; i++) {
-        if (count % 2 != 0) {
-            int mid = 1 + count / 2;
-            return temp->data;
-            temp = temp->next;
-        } else {
-            int mid = 1 + count + 1 / 2;
-            return temp->data;
+        ListNode* temp = head;
+        int count = 0;
+        while (temp != NULL) {
+            count++;
             temp = temp->next;
         }
+        temp = head;
+        for (int i = 0; i < count; i++) {
+            if (count % 2 != 0) {
+                int mid = 1 + count / 2;
+                if (i == mid - 1) {
+                    return temp;
+                }
+                temp = temp->next;
+            } else {
+                int mid = (1 + count + 1) / 2;
+                if (i == mid - 1) {
+                    return temp;
+                }
+                temp = temp->next;
+            }
+        }
+        return NULL;
     }
-}
-}
-;
+};
